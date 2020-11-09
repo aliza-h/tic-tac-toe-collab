@@ -14,5 +14,5 @@ Working with nolttr21
 	* A draw is a filled grid without a winner.
 
 **Bonuses:**
-* Grid shouldn't be playable after game ends. Have a reset button. Losing symbols goes first.
+* Grid shouldn't be playable after game ends. Have a reset button. Losing symbol goes first.
 * Make the game responsive (i.e., let it play on smaler screens)
