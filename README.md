@@ -3,6 +3,7 @@ Working with nolttr21
 
 **Deliverable:** Browser-based tic tac toe game<br/>
 **Stakeholders:** Aliza/Tristan/CSET class<br/>
+**Constraints:** 5 days to work on it. Needs to be a single webpage.<br/>
 **Requirements:**<br/>
 * Use both HTML and JS
 * 3x3 grid that fits in browser screen
@@ -15,4 +16,4 @@ Working with nolttr21
 
 **Bonuses:**
 * Grid shouldn't be playable after game ends. Have a reset button. Losing symbol goes first.
-* Make the game responsive (i.e., let it play on smaler screens)
+* Make the game responsive (i.e., let it play on smaller screens)
