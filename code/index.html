@@ -1,33 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=0" />
 
-    <title>Tic Tac Toe Game</title>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=0" />
 
-    <link rel="stylesheet" href="styles.css" type="text/css" />
-  </head>
+	<title>Tic Tac Toe Game</title>
 
-  <body>
+	<link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
 
-    <table>
-      <TR>
-         <TD id="1">1</TD>
-         <TD id="2">2</TD>
-         <TD id="3">3</TD>
-      </TR>
-      <TR>
-        <TD id="4">4</TD>
-        <TD id="5">5</TD>
-        <TD id="6">6</TD>
-      </TR>
-      <TR>
-        <TD id="7">7</TD>
-        <TD id="8">8</TD>
-        <TD id="9">9</TD>
-      </TR>
-    </table>
+<body>
+	<div class="page">
 
-    <script src="main.js"></script>
-  </body>
+	<!-- begin game board -->
+	<table>
+		<TR>
+			<TD id="1">1</TD>
+			<TD id="2">2</TD>
+			<TD id="3">3</TD>
+		</TR>
+		<TR>
+			<TD id="4">4</TD>
+			<TD id="5">5</TD>
+			<TD id="6">6</TD>
+		</TR>
+		<TR>
+			<TD id="7">7</TD>
+			<TD id="8">8</TD>
+			<TD id="9">9</TD>
+		</TR>
+	</table>
+	<!-- end game board -->
+
+	<!-- player name display -->
+	<p id="player-name">[name]'s turn</p>
+
+	<!-- reset button -->
+	<button id="reset-button">RESET</button>
+
+	</div>
+	<script src="main.js"></script>
+</body>
