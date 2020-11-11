@@ -2,6 +2,25 @@ let winnerDeclared = false; //no one will be allowed to place a piece if someone
 let isTurnX = true;
 let turnsLeft = 9; //decremented each time someone places a piece, when equal to zero(all spaces filled)
 
+var numXInColumnOne = 0;//keeps track of all the variables for player X, detecting if a row column or diagonal
+var numXInColumnTwo = 0;
+var numXInColumnThree = 0;
+var numXInRowOne = 0;
+var numXInRowTwo = 0;
+var numXInRowThree = 0;
+var numXInDiagonalDecline = 0;
+var numXInDiagonalIncline = 0;
+
+var numOInColumnOne = 0;
+var numOInColumnTwo = 0;
+var numOInColumnThree = 0;
+var numOInRowOne = 0;
+var numOInRowTwo = 0;
+var numOInRowThree = 0;
+var numOInDiagonalDecline = 0;
+var numOInDiagonalIncline = 0;
+
+
 const play = function() {
     let cell1 = document.getElementById("1");
     let cell2 = document.getElementById("2");
@@ -18,10 +37,16 @@ const play = function() {
         if (!(cell1.textContent == "x" || cell1.textContent == "o")) {
             if (isTurnX) {
                 cell1.textContent = "x";
-				isTurnX = false;
+                numXInColumnOne++;
+                numXInRowOne++;
+                numXInDiagonalDecline++;
+				        isTurnX = false;
             } else {
                 cell1.textContent = "o";
-				isTurnX = true;
+                numOInColumnOne++;
+                numOInRowOne++;
+                numOInDiagonalDecline++;
+				        isTurnX = true;
             }
             turnsLeft--;
         }
@@ -33,10 +58,14 @@ const play = function() {
         if (!(cell2.textContent == "x" || cell2.textContent == "o")) {
             if (isTurnX) {
                 cell2.textContent = "x";
-				isTurnX = false;
+                numXInRowOne++;
+                numXInColumnTwo++;
+				        isTurnX = false;
             } else {
                 cell2.textContent = "o";
-				isTurnX = true;
+                numOInRowOne++;
+                numOInColumnTwo++;
+				        isTurnX = true;
             }
             turnsLeft--;
         }
@@ -48,10 +77,16 @@ const play = function() {
         if (!(cell3.textContent == "x" || cell3.textContent == "o")) {
             if (isTurnX) {
                 cell3.textContent = "x";
-				isTurnX = false;
+                numXInRowOne++;
+                numXInColumnThree++;
+                numXInDiagonalIncline++;
+				        isTurnX = false;
             } else {
                 cell3.textContent = "o";
-				isTurnX = true;
+                numOInRowOne++;
+                numOInColumnThree++;
+                numOInDiagonalIncline++;
+				        isTurnX = true;
             }
             turnsLeft--;
         }
@@ -63,11 +98,16 @@ const play = function() {
         if (!(cell4.textContent == "x" || cell4.textContent == "o")) {
             if (isTurnX) {
                 cell4.textContent = "x";
-				isTurnX = false;
+                numXInRowTwo++;
+                numXInColumnOne++;
+
+				        isTurnX = false;
 
             } else {
                 cell4.textContent = "o";
-				isTurnX = true;
+                numOInRowTwo++;
+                numOInColumnOne++;
+				        isTurnX = true;
             }
             turnsLeft--;
         }
@@ -79,10 +119,18 @@ const play = function() {
         if (!(cell5.textContent == "x" || cell5.textContent == "o")) {
             if (isTurnX) {
                 cell5.textContent = "x";
-				isTurnX = false;
+                numXInRowTwo++;
+                numXInColumnTwo++;
+                numXInDiagonalIncline++;
+                numXInDiagonalDecline++;
+				        isTurnX = false;
             } else {
                 cell5.textContent = "o";
-				isTurnX = true;
+                numOInRowTwo++;
+                numOInColumnTwo++;
+                numOInDiagonalIncline++;
+                numOInDiagonalDecline++;
+				        isTurnX = true;
             }
             turnsLeft--;
         }
@@ -94,10 +142,14 @@ const play = function() {
         if (!(cell6.textContent == "x" || cell6.textContent == "o")) {
             if (isTurnX) {
                 cell6.textContent = "x";
-				isTurnX = false;
+                numXInRowTwo++;
+                numXInColumnThree++;
+				        isTurnX = false;
             } else {
                 cell6.textContent = "o";
-				isTurnX = true;
+                numOInRowTwo++;
+                numOInColumnThree++;
+				        isTurnX = true;
             }
             turnsLeft--;
         }
@@ -109,10 +161,16 @@ const play = function() {
         if (!(cell7.textContent == "x" || cell7.textContent == "o")) {
             if (isTurnX) {
                 cell7.textContent = "x";
-				isTurnX = false;
+                numXInRowThree++;
+                numXInColumnThree++;
+                numXInDiagonalIncline++;
+				        isTurnX = false;
             } else {
                 cell7.textContent = "o";
-				isTurnX = true;
+                numOInRowThree++;
+                numOInColumnThree++;
+                numOInDiagonalIncline++;
+				        isTurnX = true;
             }
             turnsLeft--;
         }
@@ -124,10 +182,14 @@ const play = function() {
         if (!(cell8.textContent == "x" || cell8.textContent == "o")) {
             if (isTurnX) {
                 cell8.textContent = "x";
-				isTurnX = false;
+                numXInRowThree++;
+                numXInColumnTwo++;
+				        isTurnX = false;
             } else {
                 cell8.textContent = "o";
-				isTurnX = true;
+                numOInRowThree++;
+                numOInColumnTwo++;
+				        isTurnX = true;
             }
             turnsLeft--;
         }
@@ -139,10 +201,16 @@ const play = function() {
         if (!(cell9.textContent == "x" || cell9.textContent == "o")) {
             if (isTurnX) {
                 cell9.textContent = "x";
-				isTurnX = false;
+                numXInRowThree++;
+                numXInColumnThree++;
+                numXInDiagonalDecline++;
+				        isTurnX = false;
             } else {
                 cell9.textContent = "o";
-				isTurnX = true;
+                numOInRowThree++;
+                numOInColumnThree++;
+                numOInDiagonalDecline++;
+				        isTurnX = true;
             }
             turnsLeft--;
         }
@@ -151,6 +219,7 @@ const play = function() {
     });
 
 };
+
 
 play();
 
