@@ -38,8 +38,6 @@ const play = function() {
 
 
 	const checkWin = function() {
-	    console.log(winnerDeclared + " won");
-	    console.log(numXInRowOne);
 
 	    if (numXInColumnOne == 3) {
 	        xWin = true;
