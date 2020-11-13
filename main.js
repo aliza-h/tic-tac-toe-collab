@@ -44,83 +44,131 @@ const play = function() {
 	    if (numXInColumnOne == 3) {
 	        xWin = true;
 	        winnerDeclared = true;
+			cell1.style.backgroundColor = "rgb(74, 222, 16)";
+		    cell4.style.backgroundColor = "rgb(74, 222, 16)";
+		    cell7.style.backgroundColor = "rgb(74, 222, 16)";
 	    }
 
 	    if (numXInColumnTwo == 3) {
 	        xWin = true;
 	        winnerDeclared = true;
+			cell2.style.backgroundColor = "rgb(74, 222, 16)";
+			cell5.style.backgroundColor = "rgb(74, 222, 16)";
+			cell8.style.backgroundColor = "rgb(74, 222, 16)";
 	    }
 
 	    if (numXInColumnThree == 3) {
 	        xWin = true;
 	        winnerDeclared = true;
+			cell3.style.backgroundColor = "rgb(74, 222, 16)";
+			cell6.style.backgroundColor = "rgb(74, 222, 16)";
+			cell9.style.backgroundColor = "rgb(74, 222, 16)";
 	    }
 
 	    if (numXInRowOne == 3) {
 	        xWin = true;
 	        console.log("hey");
 	        winnerDeclared = true;
+			cell1.style.backgroundColor = "rgb(74, 222, 16)";
+			cell2.style.backgroundColor = "rgb(74, 222, 16)";
+			cell3.style.backgroundColor = "rgb(74, 222, 16)";
 	    }
 
 	    if (numXInRowTwo == 3) {
 	        xWin = true;
 	        winnerDeclared = true;
+			cell4.style.backgroundColor = "rgb(74, 222, 16)";
+			cell5.style.backgroundColor = "rgb(74, 222, 16)";
+			cell6.style.backgroundColor = "rgb(74, 222, 16)";
 	    }
 
 	    if (numXInRowThree == 3) {
 	        xWin = true;
 	        winnerDeclared = true;
+			cell7.style.backgroundColor = "rgb(74, 222, 16)";
+			cell8.style.backgroundColor = "rgb(74, 222, 16)";
+			cell9.style.backgroundColor = "rgb(74, 222, 16)";
 	    }
 
 	    if (numXInDiagonalDecline == 3) {
 	        xWin = true;
 	        winnerDeclared = true;
+			cell1.style.backgroundColor = "rgb(74, 222, 16)";
+			cell5.style.backgroundColor = "rgb(74, 222, 16)";
+			cell9.style.backgroundColor = "rgb(74, 222, 16)";
 	    }
 
 	    if (numXInDiagonalIncline == 3) {
 	        xWin = true;
 	        winnerDeclared = true;
+			cell7.style.backgroundColor = "rgb(74, 222, 16)";
+			cell5.style.backgroundColor = "rgb(74, 222, 16)";
+			cell3.style.backgroundColor = "rgb(74, 222, 16)";
 	    }
 
 
 	    if (numOInColumnOne == 3) {
 	        oWin = true;
 	        winnerDeclared = true;
+			cell1.style.backgroundColor = "rgb(74, 222, 16)";
+			cell4.style.backgroundColor = "rgb(74, 222, 16)";
+			cell7.style.backgroundColor = "rgb(74, 222, 16)";
 	    }
 
 	    if (numOInColumnTwo == 3) {
 	        oWin = true;
 	        winnerDeclared = true;
+			cell2.style.backgroundColor = "rgb(74, 222, 16)";
+			cell5.style.backgroundColor = "rgb(74, 222, 16)";
+			cell8.style.backgroundColor = "rgb(74, 222, 16)";
 	    }
 
 	    if (numOInColumnThree == 3) {
 	        oWin = true;
 	        winnerDeclared = true;
+			cell3.style.backgroundColor = "rgb(74, 222, 16)";
+			cell6.style.backgroundColor = "rgb(74, 222, 16)";
+			cell9.style.backgroundColor = "rgb(74, 222, 16)";
 	    }
 
 	    if (numOInRowOne == 3) {
 	        oWin = true;
 	        winnerDeclared = true;
+			cell1.style.backgroundColor = "rgb(74, 222, 16)";
+			cell2.style.backgroundColor = "rgb(74, 222, 16)";
+			cell3.style.backgroundColor = "rgb(74, 222, 16)";
 	    }
 
 	    if (numOInRowTwo == 3) {
 	        oWin = true;
 	        winnerDeclared = true;
+			cell4.style.backgroundColor = "rgb(74, 222, 16)";
+			cell5.style.backgroundColor = "rgb(74, 222, 16)";
+			cell6.style.backgroundColor = "rgb(74, 222, 16)";
 	    }
 
 	    if (numOInRowThree == 3) {
 	        oWin = true;
 	        winnerDeclared = true;
+			cell7.style.backgroundColor = "rgb(74, 222, 16)";
+			cell8.style.backgroundColor = "rgb(74, 222, 16)";
+			cell9.style.backgroundColor = "rgb(74, 222, 16)";
 	    }
 
 	    if (numOInDiagonalDecline == 3) {
 	        oWin = true;
 	        winnerDeclared = true;
+			cell1.style.backgroundColor = "rgb(74, 222, 16)";
+			cell5.style.backgroundColor = "rgb(74, 222, 16)";
+			cell9.style.backgroundColor = "rgb(74, 222, 16)";
 	    }
 
 	    if (numOInDiagonalIncline == 3) {
 	        oWin = true;
 	        winnerDeclared = true;
+			cell3.style.backgroundColor = "rgb(74, 222, 16)";
+			cell5.style.backgroundColor = "rgb(74, 222, 16)";
+			cell7.style.backgroundColor = "rgb(74, 222, 16)";
 	    }
 
 	    if (xWin) {
