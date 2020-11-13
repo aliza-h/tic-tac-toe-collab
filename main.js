@@ -331,7 +331,6 @@ const play = function() {
                 cell7.textContent = "x";
 				numXInColumnOne++;
                 numXInRowThree++;
-                numXInColumnThree++;
                 numXInDiagonalIncline++;
                 isTurnX = false;
 				playerTurn.textContent = "O's turn";
@@ -339,7 +338,6 @@ const play = function() {
                 cell7.textContent = "o";
 				numOInColumnOne++;
                 numOInRowThree++;
-                numOInColumnThree++;
                 numOInDiagonalIncline++;
                 isTurnX = true;
 				playerTurn.textContent = "X's turn";
