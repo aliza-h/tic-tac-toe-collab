@@ -177,7 +177,7 @@ const play = function() {
 	        playerTurn.textContent = "O wins";
 	    }
 
-	    if (turnsLeft == 0) {
+	    if ((turnsLeft == 0) && (!xWin) && (!oWin)) {
 	        playerTurn.textContent = "No one wins";
 	    }
 
