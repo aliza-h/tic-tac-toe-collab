@@ -4,23 +4,23 @@ let turnsLeft = 9; //decremented each time someone places a piece, when equal to
 let xWin = false;
 let oWin = false;
 
-var numXInColumnOne = 0;//keeps track of all the variables for player X, detecting if a row column or diagonal
-var numXInColumnTwo = 0;
-var numXInColumnThree = 0;
-var numXInRowOne = 0;
-var numXInRowTwo = 0;
-var numXInRowThree = 0;
-var numXInDiagonalDecline = 0;
-var numXInDiagonalIncline = 0;
+let numXInColumnOne = 0; //keeps track of all the variables for player X, detecting if a row column or diagonal
+let numXInColumnTwo = 0;
+let numXInColumnThree = 0;
+let numXInRowOne = 0;
+let numXInRowTwo = 0;
+let numXInRowThree = 0;
+let numXInDiagonalDecline = 0;
+let numXInDiagonalIncline = 0;
 
-var numOInColumnOne = 0;
-var numOInColumnTwo = 0;
-var numOInColumnThree = 0;
-var numOInRowOne = 0;
-var numOInRowTwo = 0;
-var numOInRowThree = 0;
-var numOInDiagonalDecline = 0;
-var numOInDiagonalIncline = 0;
+let numOInColumnOne = 0;
+let numOInColumnTwo = 0;
+let numOInColumnThree = 0;
+let numOInRowOne = 0;
+let numOInRowTwo = 0;
+let numOInRowThree = 0;
+let numOInDiagonalDecline = 0;
+let numOInDiagonalIncline = 0;
 
 const declareTie = function(){
   //implementation not shown AKA TODO
@@ -158,6 +158,9 @@ const checkWin = function(){
 
 
 const play = function() {
+	let resetButton = document.getElementById("reset-button");
+	let playerTurn = document.getElementById("player-name");
+
     let cell1 = document.getElementById("1");
     let cell2 = document.getElementById("2");
     let cell3 = document.getElementById("3");
@@ -168,6 +171,13 @@ const play = function() {
     let cell8 = document.getElementById("8");
     let cell9 = document.getElementById("9");
 
+// Put this in every cell click event!
+if (isTurnX) {
+	playerTurn.textContent = "X's turn";
+} else {
+	playerTurn.textContent = "O's turn";
+}
+// Put this in every cell click event!
 
     cell1.addEventListener("click", () => {
         if (!(cell1.textContent == "x" || cell1.textContent == "o") && !winnerDeclared) {
@@ -364,7 +374,6 @@ const play = function() {
     });
 
 };
-
 
 play();
 

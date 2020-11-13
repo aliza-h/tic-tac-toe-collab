@@ -1,5 +1,5 @@
 * {
-    color: blue;
+    color: black;
 	text-transform: uppercase;
 	font-family: sans-serif;
 }
@@ -20,7 +20,6 @@ table {
 
 TR {
 	display: flex;
-	border: 2px solid blue; /* Temporary; colors used for visual */
 }
 
 TD {
@@ -28,9 +27,10 @@ TD {
 	height: 140px;
 	width: 140px;
 	margin: 2px;
-	border: 2px solid red; /* The borders here will stay, but the colors will probably change. */
+	border: 2px solid gray;
 	justify-content: center;
 	align-items: center;
+	font-size: 3em;
 }
 
 #player-name {
