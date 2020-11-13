@@ -38,24 +38,45 @@ const declareOWinner = function(){
 }
 
 const checkWin = function(){
+  let cell1 = document.getElementById("1");
+  let cell2 = document.getElementById("2");
+  let cell3 = document.getElementById("3");
+  let cell4 = document.getElementById("4");
+  let cell5 = document.getElementById("5");
+  let cell6 = document.getElementById("6");
+  let cell7 = document.getElementById("7");
+  let cell8 = document.getElementById("8");
+  let cell9 = document.getElementById("9");
+
   console.log(winnerDeclared + " won");
-  console.log(numXInRowOne);
+  console.log(numXInColumnOne);
   if (numXInColumnOne == 3)
   {
     xWin = true;
     winnerDeclared = true;
+    cell1.style.backgroundColor = "rgb(74, 222, 16)";
+    cell4.style.backgroundColor = "rgb(74, 222, 16)";
+    cell7.style.backgroundColor = "rgb(74, 222, 16)";
+    console.log("ez");
+
   }
 
   if (numXInColumnTwo == 3)
   {
     xWin = true;
     winnerDeclared = true;
+    cell2.style.backgroundColor = "rgb(74, 222, 16)";
+    cell5.style.backgroundColor = "rgb(74, 222, 16)";
+    cell8.style.backgroundColor = "rgb(74, 222, 16)";
   }
 
   if (numXInColumnThree == 3)
   {
     xWin = true;
     winnerDeclared = true;
+    cell3.style.backgroundColor = "rgb(74, 222, 16)";
+    cell6.style.backgroundColor = "rgb(74, 222, 16)";
+    cell9.style.backgroundColor = "rgb(74, 222, 16)";
   }
 
   if (numXInRowOne == 3)
@@ -63,80 +84,124 @@ const checkWin = function(){
     xWin = true;
     console.log("hey");
     winnerDeclared = true;
+    cell1.style.backgroundColor = "rgb(74, 222, 16)";
+    cell2.style.backgroundColor = "rgb(74, 222, 16)";
+    cell3.style.backgroundColor = "rgb(74, 222, 16)";
   }
 
   if (numXInRowTwo == 3)
   {
     xWin = true;
     winnerDeclared = true;
+    cell4.style.backgroundColor = "rgb(74, 222, 16)";
+    cell5.style.backgroundColor = "rgb(74, 222, 16)";
+    cell6.style.backgroundColor = "rgb(74, 222, 16)";
   }
 
   if (numXInRowThree == 3)
   {
     xWin = true;
     winnerDeclared = true;
+    cell7.style.backgroundColor = "rgb(74, 222, 16)";
+    cell8.style.backgroundColor = "rgb(74, 222, 16)";
+    cell9.style.backgroundColor = "rgb(74, 222, 16)";
   }
 
   if (numXInDiagonalDecline == 3)
   {
     xWin = true;
     winnerDeclared = true;
+    cell1.style.backgroundColor = "rgb(74, 222, 16)";
+    cell5.style.backgroundColor = "rgb(74, 222, 16)";
+    cell9.style.backgroundColor = "rgb(74, 222, 16)";
   }
 
   if (numXInDiagonalIncline == 3)
   {
     xWin = true;
     winnerDeclared = true;
+    cell3.style.backgroundColor = "rgb(74, 222, 16)";
+    cell5.style.backgroundColor = "rgb(74, 222, 16)";
+    cell7.style.backgroundColor = "rgb(74, 222, 16)";
   }
+
+
+
 
 
   if (numOInColumnOne == 3)
   {
     oWin = true;
     winnerDeclared = true;
+    cell1.style.backgroundColor = "rgb(74, 222, 16)";
+    cell4.style.backgroundColor = "rgb(74, 222, 16)";
+    cell7.style.backgroundColor = "rgb(74, 222, 16)";
   }
 
   if (numOInColumnTwo == 3)
   {
     oWin = true;
     winnerDeclared = true;
+    cell2.style.backgroundColor = "rgb(74, 222, 16)";
+    cell5.style.backgroundColor = "rgb(74, 222, 16)";
+    cell8.style.backgroundColor = "rgb(74, 222, 16)";
   }
 
   if (numOInColumnThree == 3)
   {
     oWin = true;
     winnerDeclared = true;
+    cell3.style.backgroundColor = "rgb(74, 222, 16)";
+    cell6.style.backgroundColor = "rgb(74, 222, 16)";
+    cell9.style.backgroundColor = "rgb(74, 222, 16)";
   }
 
   if (numOInRowOne == 3)
   {
     oWin = true;
     winnerDeclared = true;
+    cell1.style.backgroundColor = "rgb(74, 222, 16)";
+    cell2.style.backgroundColor = "rgb(74, 222, 16)";
+    cell3.style.backgroundColor = "rgb(74, 222, 16)";
   }
 
   if (numOInRowTwo == 3)
   {
     oWin = true;
     winnerDeclared = true;
+    cell4.style.backgroundColor = "rgb(74, 222, 16)";
+    cell5.style.backgroundColor = "rgb(74, 222, 16)";
+    cell6.style.backgroundColor = "rgb(74, 222, 16)";
   }
 
   if (numOInRowThree == 3)
   {
     oWin = true;
     winnerDeclared = true;
+    cell7.style.backgroundColor = "rgb(74, 222, 16)";
+    cell8.style.backgroundColor = "rgb(74, 222, 16)";
+    cell9.style.backgroundColor = "rgb(74, 222, 16)";
   }
 
   if (numOInDiagonalDecline == 3)
   {
     oWin = true;
     winnerDeclared = true;
+    cell1.style.backgroundColor = "rgb(74, 222, 16)";
+    cell5.style.backgroundColor = "rgb(74, 222, 16)";
+    cell9.style.backgroundColor = "rgb(74, 222, 16)";
   }
 
   if (numOInDiagonalIncline == 3)
   {
     oWin = true;
     winnerDeclared = true;
+    cell3.style.backgroundColor = "rgb(74, 222, 16)";
+    cell5.style.backgroundColor = "rgb(74, 222, 16)";
+    cell7.style.backgroundColor = "rgb(74, 222, 16)";
   }
+
+  //console.log(xWin + "x won");
 
   if (xWin)
   {
@@ -314,13 +379,13 @@ if (isTurnX) {
             if (isTurnX) {
                 cell7.textContent = "x";
                 numXInRowThree++;
-                numXInColumnThree++;
+                numXInColumnOne++;
                 numXInDiagonalIncline++;
 				        isTurnX = false;
             } else {
                 cell7.textContent = "o";
                 numOInRowThree++;
-                numOInColumnThree++;
+                numOInColumnOne++;
                 numOInDiagonalIncline++;
 				        isTurnX = true;
             }
