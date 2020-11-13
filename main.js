@@ -101,9 +101,9 @@ const play = function() {
 	    if (numXInDiagonalIncline == 3) {
 	        xWin = true;
 	        winnerDeclared = true;
-			cell7.style.backgroundColor = "rgb(74, 222, 16)";
-			cell5.style.backgroundColor = "rgb(74, 222, 16)";
 			cell3.style.backgroundColor = "rgb(74, 222, 16)";
+			cell5.style.backgroundColor = "rgb(74, 222, 16)";
+    		cell7.style.backgroundColor = "rgb(74, 222, 16)";
 	    }
 
 
@@ -333,7 +333,7 @@ const play = function() {
                 cell7.textContent = "x";
 				numXInColumnOne++;
                 numXInRowThree++;
-                numXInColumnThree++;
+                numXInColumnOne++;
                 numXInDiagonalIncline++;
                 isTurnX = false;
 				playerTurn.textContent = "O's turn";
@@ -341,7 +341,7 @@ const play = function() {
                 cell7.textContent = "o";
 				numOInColumnOne++;
                 numOInRowThree++;
-                numOInColumnThree++;
+                numOInColumnOne++;
                 numOInDiagonalIncline++;
                 isTurnX = true;
 				playerTurn.textContent = "X's turn";
