@@ -1,164 +1,5 @@
-let winnerDeclared = false; //no one will be allowed to place a piece if someone else already won
-let isTurnX = true;
-let turnsLeft = 9; //decremented each time someone places a piece, when equal to zero(all spaces filled)
-let xWin = false;
-let oWin = false;
-
-let numXInColumnOne = 0; //keeps track of all the variables for player X, detecting if a row column or diagonal
-let numXInColumnTwo = 0;
-let numXInColumnThree = 0;
-let numXInRowOne = 0;
-let numXInRowTwo = 0;
-let numXInRowThree = 0;
-let numXInDiagonalDecline = 0;
-let numXInDiagonalIncline = 0;
-
-let numOInColumnOne = 0;
-let numOInColumnTwo = 0;
-let numOInColumnThree = 0;
-let numOInRowOne = 0;
-let numOInRowTwo = 0;
-let numOInRowThree = 0;
-let numOInDiagonalDecline = 0;
-let numOInDiagonalIncline = 0;
-
-const declareTie = function(){
-  //implementation not shown AKA TODO
-  console.log("No one won");
-}
-
-const declareXWinner = function(){
-  //implementation not shown AKA TODO
-  console.log("X won");
-}
-
-const declareOWinner = function(){
-  //implementation not show AKA TODO
-  console.log("O won");
-}
-
-const checkWin = function(){
-  console.log(winnerDeclared + " won");
-  console.log(numXInRowOne);
-  if (numXInColumnOne == 3)
-  {
-    xWin = true;
-    winnerDeclared = true;
-  }
-
-  if (numXInColumnTwo == 3)
-  {
-    xWin = true;
-    winnerDeclared = true;
-  }
-
-  if (numXInColumnThree == 3)
-  {
-    xWin = true;
-    winnerDeclared = true;
-  }
-
-  if (numXInRowOne == 3)
-  {
-    xWin = true;
-    console.log("hey");
-    winnerDeclared = true;
-  }
-
-  if (numXInRowTwo == 3)
-  {
-    xWin = true;
-    winnerDeclared = true;
-  }
-
-  if (numXInRowThree == 3)
-  {
-    xWin = true;
-    winnerDeclared = true;
-  }
-
-  if (numXInDiagonalDecline == 3)
-  {
-    xWin = true;
-    winnerDeclared = true;
-  }
-
-  if (numXInDiagonalIncline == 3)
-  {
-    xWin = true;
-    winnerDeclared = true;
-  }
-
-
-  if (numOInColumnOne == 3)
-  {
-    oWin = true;
-    winnerDeclared = true;
-  }
-
-  if (numOInColumnTwo == 3)
-  {
-    oWin = true;
-    winnerDeclared = true;
-  }
-
-  if (numOInColumnThree == 3)
-  {
-    oWin = true;
-    winnerDeclared = true;
-  }
-
-  if (numOInRowOne == 3)
-  {
-    oWin = true;
-    winnerDeclared = true;
-  }
-
-  if (numOInRowTwo == 3)
-  {
-    oWin = true;
-    winnerDeclared = true;
-  }
-
-  if (numOInRowThree == 3)
-  {
-    oWin = true;
-    winnerDeclared = true;
-  }
-
-  if (numOInDiagonalDecline == 3)
-  {
-    oWin = true;
-    winnerDeclared = true;
-  }
-
-  if (numOInDiagonalIncline == 3)
-  {
-    oWin = true;
-    winnerDeclared = true;
-  }
-
-  if (xWin)
-  {
-    declareXWinner();
-  }
-
-  if (oWin)
-  {
-    declareOWinner();
-  }
-
-  if (turnsLeft == 0)
-  {
-    declareTie();
-  }
-
-
-}
-
-
 const play = function() {
-	let resetButton = document.getElementById("reset-button");
+    let resetButton = document.getElementById("reset-button");
 	let playerTurn = document.getElementById("player-name");
 
     let cell1 = document.getElementById("1");
@@ -171,13 +12,132 @@ const play = function() {
     let cell8 = document.getElementById("8");
     let cell9 = document.getElementById("9");
 
-// Put this in every cell click event!
-if (isTurnX) {
-	playerTurn.textContent = "X's turn";
-} else {
-	playerTurn.textContent = "O's turn";
-}
-// Put this in every cell click event!
+	let winnerDeclared = false; //no one will be allowed to place a piece if someone else already won
+	let isTurnX = true;
+	let turnsLeft = 9; //decremented each time someone places a piece, when equal to zero(all spaces filled)
+	let xWin = false;
+	let oWin = false;
+
+	let numXInColumnOne = 0; //keeps track of all the variables for player X, detecting if a row column or diagonal
+	let numXInColumnTwo = 0;
+	let numXInColumnThree = 0;
+	let numXInRowOne = 0;
+	let numXInRowTwo = 0;
+	let numXInRowThree = 0;
+	let numXInDiagonalDecline = 0;
+	let numXInDiagonalIncline = 0;
+
+	let numOInColumnOne = 0;
+	let numOInColumnTwo = 0;
+	let numOInColumnThree = 0;
+	let numOInRowOne = 0;
+	let numOInRowTwo = 0;
+	let numOInRowThree = 0;
+	let numOInDiagonalDecline = 0;
+	let numOInDiagonalIncline = 0;
+
+
+	const checkWin = function() {
+	    console.log(winnerDeclared + " won");
+	    console.log(numXInRowOne);
+
+	    if (numXInColumnOne == 3) {
+	        xWin = true;
+	        winnerDeclared = true;
+	    }
+
+	    if (numXInColumnTwo == 3) {
+	        xWin = true;
+	        winnerDeclared = true;
+	    }
+
+	    if (numXInColumnThree == 3) {
+	        xWin = true;
+	        winnerDeclared = true;
+	    }
+
+	    if (numXInRowOne == 3) {
+	        xWin = true;
+	        console.log("hey");
+	        winnerDeclared = true;
+	    }
+
+	    if (numXInRowTwo == 3) {
+	        xWin = true;
+	        winnerDeclared = true;
+	    }
+
+	    if (numXInRowThree == 3) {
+	        xWin = true;
+	        winnerDeclared = true;
+	    }
+
+	    if (numXInDiagonalDecline == 3) {
+	        xWin = true;
+	        winnerDeclared = true;
+	    }
+
+	    if (numXInDiagonalIncline == 3) {
+	        xWin = true;
+	        winnerDeclared = true;
+	    }
+
+
+	    if (numOInColumnOne == 3) {
+	        oWin = true;
+	        winnerDeclared = true;
+	    }
+
+	    if (numOInColumnTwo == 3) {
+	        oWin = true;
+	        winnerDeclared = true;
+	    }
+
+	    if (numOInColumnThree == 3) {
+	        oWin = true;
+	        winnerDeclared = true;
+	    }
+
+	    if (numOInRowOne == 3) {
+	        oWin = true;
+	        winnerDeclared = true;
+	    }
+
+	    if (numOInRowTwo == 3) {
+	        oWin = true;
+	        winnerDeclared = true;
+	    }
+
+	    if (numOInRowThree == 3) {
+	        oWin = true;
+	        winnerDeclared = true;
+	    }
+
+	    if (numOInDiagonalDecline == 3) {
+	        oWin = true;
+	        winnerDeclared = true;
+	    }
+
+	    if (numOInDiagonalIncline == 3) {
+	        oWin = true;
+	        winnerDeclared = true;
+	    }
+
+	    if (xWin) {
+	        playerTurn.textContent = "X wins";
+	    }
+
+	    if (oWin) {
+	        playerTurn.textContent = "O wins";
+	    }
+
+	    if (turnsLeft == 0) {
+	        playerTurn.textContent = "No one wins";
+	    }
+
+
+	}
+
 
     cell1.addEventListener("click", () => {
         if (!(cell1.textContent == "x" || cell1.textContent == "o") && !winnerDeclared) {
@@ -186,13 +146,15 @@ if (isTurnX) {
                 numXInColumnOne++;
                 numXInRowOne++;
                 numXInDiagonalDecline++;
-				        isTurnX = false;
+                isTurnX = false;
+				playerTurn.textContent = "O's turn";
             } else {
                 cell1.textContent = "o";
                 numOInColumnOne++;
                 numOInRowOne++;
                 numOInDiagonalDecline++;
-				        isTurnX = true;
+                isTurnX = true;
+				playerTurn.textContent = "X's turn";
             }
             turnsLeft--;
             checkWin();
@@ -201,18 +163,20 @@ if (isTurnX) {
         console.log(isTurnX);
     });
 
-	cell2.addEventListener("click", () => {
+    cell2.addEventListener("click", () => {
         if (!(cell2.textContent == "x" || cell2.textContent == "o") && !winnerDeclared) {
             if (isTurnX) {
                 cell2.textContent = "x";
                 numXInRowOne++;
                 numXInColumnTwo++;
-				        isTurnX = false;
+                isTurnX = false;
+				playerTurn.textContent = "O's turn";
             } else {
                 cell2.textContent = "o";
                 numOInRowOne++;
                 numOInColumnTwo++;
-				        isTurnX = true;
+                isTurnX = true;
+				playerTurn.textContent = "X's turn";
             }
             turnsLeft--;
             checkWin();
@@ -221,20 +185,22 @@ if (isTurnX) {
         console.log(isTurnX);
     });
 
-	cell3.addEventListener("click", () => {
+    cell3.addEventListener("click", () => {
         if (!(cell3.textContent == "x" || cell3.textContent == "o") && !winnerDeclared) {
             if (isTurnX) {
                 cell3.textContent = "x";
                 numXInRowOne++;
                 numXInColumnThree++;
                 numXInDiagonalIncline++;
-				        isTurnX = false;
+                isTurnX = false;
+				playerTurn.textContent = "O's turn";
             } else {
                 cell3.textContent = "o";
                 numOInRowOne++;
                 numOInColumnThree++;
                 numOInDiagonalIncline++;
-				        isTurnX = true;
+                isTurnX = true;
+				playerTurn.textContent = "X's turn";
             }
             turnsLeft--;
             checkWin();
@@ -243,20 +209,20 @@ if (isTurnX) {
         console.log(isTurnX);
     });
 
-	cell4.addEventListener("click", () => {
+    cell4.addEventListener("click", () => {
         if (!(cell4.textContent == "x" || cell4.textContent == "o") && !winnerDeclared) {
             if (isTurnX) {
                 cell4.textContent = "x";
                 numXInRowTwo++;
                 numXInColumnOne++;
-
-				        isTurnX = false;
-
+                isTurnX = false;
+				playerTurn.textContent = "O's turn";
             } else {
                 cell4.textContent = "o";
                 numOInRowTwo++;
                 numOInColumnOne++;
-				        isTurnX = true;
+                isTurnX = true;
+				playerTurn.textContent = "X's turn";
             }
             turnsLeft--;
             checkWin();
@@ -265,7 +231,7 @@ if (isTurnX) {
         console.log(isTurnX);
     });
 
-	cell5.addEventListener("click", () => {
+    cell5.addEventListener("click", () => {
         if (!(cell5.textContent == "x" || cell5.textContent == "o") && !winnerDeclared) {
             if (isTurnX) {
                 cell5.textContent = "x";
@@ -273,14 +239,16 @@ if (isTurnX) {
                 numXInColumnTwo++;
                 numXInDiagonalIncline++;
                 numXInDiagonalDecline++;
-				        isTurnX = false;
+                isTurnX = false;
+				playerTurn.textContent = "O's turn";
             } else {
                 cell5.textContent = "o";
                 numOInRowTwo++;
                 numOInColumnTwo++;
                 numOInDiagonalIncline++;
                 numOInDiagonalDecline++;
-				        isTurnX = true;
+                isTurnX = true;
+				playerTurn.textContent = "X's turn";
             }
             turnsLeft--;
             checkWin();
@@ -289,18 +257,20 @@ if (isTurnX) {
         console.log(isTurnX);
     });
 
-	cell6.addEventListener("click", () => {
+    cell6.addEventListener("click", () => {
         if (!(cell6.textContent == "x" || cell6.textContent == "o") && !winnerDeclared) {
             if (isTurnX) {
                 cell6.textContent = "x";
                 numXInRowTwo++;
                 numXInColumnThree++;
-				        isTurnX = false;
+                isTurnX = false;
+				playerTurn.textContent = "O's turn";
             } else {
                 cell6.textContent = "o";
                 numOInRowTwo++;
                 numOInColumnThree++;
-				        isTurnX = true;
+                isTurnX = true;
+				playerTurn.textContent = "X's turn";
             }
             turnsLeft--;
             checkWin();
@@ -309,20 +279,24 @@ if (isTurnX) {
         console.log(isTurnX);
     });
 
-	cell7.addEventListener("click", () => {
+    cell7.addEventListener("click", () => {
         if (!(cell7.textContent == "x" || cell7.textContent == "o") && !winnerDeclared) {
             if (isTurnX) {
                 cell7.textContent = "x";
+				numXInColumnOne++;
                 numXInRowThree++;
                 numXInColumnThree++;
                 numXInDiagonalIncline++;
-				        isTurnX = false;
+                isTurnX = false;
+				playerTurn.textContent = "O's turn";
             } else {
                 cell7.textContent = "o";
+				numOInColumnOne++;
                 numOInRowThree++;
                 numOInColumnThree++;
                 numOInDiagonalIncline++;
-				        isTurnX = true;
+                isTurnX = true;
+				playerTurn.textContent = "X's turn";
             }
             turnsLeft--;
             checkWin();
@@ -331,18 +305,20 @@ if (isTurnX) {
         console.log(isTurnX);
     });
 
-	cell8.addEventListener("click", () => {
+    cell8.addEventListener("click", () => {
         if (!(cell8.textContent == "x" || cell8.textContent == "o") && !winnerDeclared) {
             if (isTurnX) {
                 cell8.textContent = "x";
                 numXInRowThree++;
                 numXInColumnTwo++;
-				        isTurnX = false;
+                isTurnX = false;
+				playerTurn.textContent = "O's turn";
             } else {
                 cell8.textContent = "o";
                 numOInRowThree++;
                 numOInColumnTwo++;
-				        isTurnX = true;
+                isTurnX = true;
+				playerTurn.textContent = "X's turn";
             }
             turnsLeft--;
             checkWin();
@@ -351,20 +327,22 @@ if (isTurnX) {
         console.log(isTurnX);
     });
 
-	cell9.addEventListener("click", () => {
+    cell9.addEventListener("click", () => {
         if (!(cell9.textContent == "x" || cell9.textContent == "o") && !winnerDeclared) {
             if (isTurnX) {
                 cell9.textContent = "x";
                 numXInRowThree++;
                 numXInColumnThree++;
                 numXInDiagonalDecline++;
-				        isTurnX = false;
+                isTurnX = false;
+				playerTurn.textContent = "O's turn";
             } else {
                 cell9.textContent = "o";
                 numOInRowThree++;
                 numOInColumnThree++;
                 numOInDiagonalDecline++;
-				        isTurnX = true;
+                isTurnX = true;
+				playerTurn.textContent = "X's turn";
             }
             turnsLeft--;
             checkWin();

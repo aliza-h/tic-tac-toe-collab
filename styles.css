@@ -1,6 +1,5 @@
 * {
     color: black;
-	text-transform: uppercase;
 	font-family: sans-serif;
 }
 
@@ -16,6 +15,7 @@ table {
 	align-items: center;
 	padding: 10px;
 	border: 2px solid grey;
+	text-transform: uppercase;
 }
 
 TR {
